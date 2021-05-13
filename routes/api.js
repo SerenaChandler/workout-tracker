@@ -4,23 +4,28 @@ const { Workout } = require("../models");
 router.post("/api/workouts", ({ body }, res) => {
   Workout.create(body)
     .then((dbWorkout) => {
-      res.json(dbTransaction);
+      res.json(dbWorkout);
     })
     .catch((err) => {
       res.status(400).json(err);
     });
 });
 
-
 router.put("/api/workouts/:id", (req, res) => {
-Workout.findByIdAndUpdate(req.params.id)
-})
+  Workout.findByIdAndUpdate(req.params.id)
+    .then((dbWorkout) => {
+      res.send(dbWorkout);
+    })
+    .catch((err) => {
+      res.status(400).json(err);
+    });
+});
 
 router.get("/api/workouts", (req, res) => {
   Workout.find({})
     .sort({ date: -1 })
-    .then((dbTransaction) => {
-      res.json(dbTransaction);
+    .then((dbWorkout) => {
+      res.json(dbWorkout);
     })
     .catch((err) => {
       res.status(400).json(err);
@@ -30,8 +35,8 @@ router.get("/api/workouts", (req, res) => {
 router.get("/api/workouts/range", (req, res) => {
   Workout.find({})
     .sort({ date: -1 })
-    .then((dbTransaction) => {
-      res.json(dbTransaction);
+    .then((dbWorkout) => {
+      res.json(dbWorkout);
     })
     .catch((err) => {
       res.status(400).json(err);
