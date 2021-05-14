@@ -17,6 +17,9 @@ Provide the backend for a workout tracker that will allow users to add in new ex
 ![image](indexPreview.png)
 
 
+![image](graphPreview.png)
+
+
 ## Code Snippets
 
 Code used to allow user to navigate to the different HTML pages
