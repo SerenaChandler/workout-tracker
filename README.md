@@ -95,3 +95,5 @@ const WorkoutSchema = new Schema({
 [GitHub](https://github.com/SerenaChandler)
 
 [repo](https://github.com/SerenaChandler/workout-tracker)
+
+[deployed app](https://calm-castle-75154.herokuapp.com/?id=609ea620342f9c00157f7fa1)
